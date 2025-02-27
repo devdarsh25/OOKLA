@@ -1,0 +1,15 @@
+int* countingSort(int arr_count, int* arr, int* result_count) {
+    // Step 1: Create an array of size 100 to store the frequency of each number
+    static int frequency[100] = {0};
+
+    // Step 2: Iterate through the input array and update the frequency array
+    for (int i = 0; i < arr_count; i++) {
+        frequency[arr[i]]++;
+    }
+
+    // Step 3: Set result_count to 100 because we're always returning an array of size 100
+    *result_count = 100;
+
+    // Step 4: Return the frequency array
+    return frequency;
+}
